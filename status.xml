@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GovTalkMessage xmlns="http://www.govtalk.gov.uk/CM/envelope"
+                xmlns:gt="http://www.govtalk.gov.uk/CM/core"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="
+                  http://www.govtalk.gov.uk/CM/envelope 
+                  http://xmlgw.companieshouse.gov.uk/v1-0/schema/Egov_ch-v2-0.xsd">
+  <EnvelopeVersion>2.0</EnvelopeVersion>
+  <Header>
+    <MessageDetails>
+      <Class>GetSubmissionStatus</Class>
+      <Qualifier>request</Qualifier>
+      <Function>read</Function>
+      <TransactionID>ABCDEF0123456789</TransactionID>
+      <GatewayTest>1</GatewayTest>
+    </MessageDetails>
+    <SenderDetails>
+      <IDAuthentication>
+        <SenderID>[md5_hash_str_to_lower]</SenderID>
+        <Authentication>
+          <Method>clear</Method>
+          <Value>[md5_hash_str_to_lower]</Value>
+        </Authentication>
+      </IDAuthentication>
+      <EmailAddress>john.smith@example.com</EmailAddress>
+    </SenderDetails>
+  </Header>
+  <GovTalkDetails>
+    <Keys>
+      <Key Type="FormType">GetSubmissionStatus</Key>
+    </Keys>
+    <TargetDetails>
+      <Organisation>Companies House</Organisation>
+    </TargetDetails>
+  </GovTalkDetails>
+  <Body>
+    <GetSubmissionStatus xmlns="http://xmlgw.companieshouse.gov.uk">
+      <SubmissionNumber>AC0001</SubmissionNumber>
+      <PresenterID>[SenderID]</PresenterID>
+    </GetSubmissionStatus>
+  </Body>
+</GovTalkMessage>
