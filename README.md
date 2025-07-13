@@ -18,7 +18,7 @@ Follow these steps to build and submit an iXBRL filing:
 
 Edit the necessary variables in `build_ixbrl.php` to reflect the current company details, accounts data, etc.
 
-### 2. Generate `output.xml`
+### 2. Generate `output.xhtml`
 
 Run the script to build the base XML structure:
 
@@ -26,14 +26,14 @@ Run the script to build the base XML structure:
 php build_ixbrl.php
 ```
 
-This will produce an `output.xml` file.
+This will produce an `output.xhtml` file which can be validated at https://test-validator.companieshouse.gov.uk/xbrl_validate
 
 ### 3. Encode the XML in Base64
 
-Use PHP to encode `output.xml` into base64 format:
+Use PHP to encode `output.xhtml` into base64 format:
 
 ```php
-$encoded = base64_encode(file_get_contents('output.xml'));
+$encoded = base64_encode(file_get_contents('output.xhtml'));
 ```
 
 ### 4. Update `envelope.xml`
