@@ -190,7 +190,7 @@ try {
     $error = $exception->getMessage();
     try {
         $proposal = FilingManager::proposal($filing, $today, $schemaRef);
-    } catch (Throwable) {
+    } catch (Throwable $ignored) {
         $proposal = $filing;
     }
 }
