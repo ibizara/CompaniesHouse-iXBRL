@@ -89,8 +89,6 @@ Submission number:  AC0001
 Customer reference: IXBRL001
 ```
 
-Use `AC`, not `ACC`.
-
 ### 3. Configure presenter and company details
 
 Edit `config.local.php`.
@@ -281,11 +279,3 @@ The repository includes an FRC 2023 taxonomy configuration because it matches th
 This project is narrowly tailored to the included micro-entity accounts template. It does not determine whether a company qualifies as a micro-entity, whether it is dormant, whether an audit exemption applies or whether the figures/statements are correct.
 
 The renderer checks for missing placeholders and well-formed XML, but it does not replace official iXBRL/business-rule validation.
-
-## Updating the existing GitHub repository
-
-See [GITHUB-UPDATE-CHECKLIST.md](GITHUB-UPDATE-CHECKLIST.md). Uploading new files does not automatically remove the old proof-of-concept files or erase old Git history.
-
-## Licence
-
-No licence file is included in this package. The repository owner should choose and add an appropriate licence before inviting third-party reuse or contributions.
