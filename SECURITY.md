@@ -95,11 +95,3 @@ chmod 0660 /var/www/CompaniesHouse-iXBRL/storage/transaction_id.txt
 ```
 
 The project root and PHP source files do not need to be writable by the web-server user.
-
-## Git history
-
-Deleting or replacing a file in the current branch does not remove it from old commits. If a presenter code, authentication code or other secret was ever committed, rotate it and either rewrite the repository history or create a new repository from the sanitised tree.
-
-## Reporting security issues
-
-Do not include real presenter credentials, company authentication codes, envelopes or response files in a public issue.
